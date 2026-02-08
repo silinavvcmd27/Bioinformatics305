@@ -1,0 +1,138 @@
+  136  git --version
+  139  sudo apt install git -y
+  140  git --version
+  142  git init
+  143  git add README.md
+  144  git commit -m "first commit"
+  145  git branch -M main
+  146  git remote add origin git@github.com:Weakne55/Seminars2026.git
+  147  git push -u origin main
+  149  git branch -a
+  154  git status
+  155  git config --local --list
+  156  git push -u origin
+  157  git branch -a
+  159  git add test.md
+  160  git commit -m "test commit"
+  161  git config --global user.name "Weakne55"
+  162  git config --global user.email "shilina.vv@phystech.edu"
+  163  git config --global --list
+  164  git add test.md
+  165  git commit -m "test commit"
+  166  git commit -m "test commit" --author="Weakne55 <shilina.vv@phystech.edu>"
+  167  git push -u origin main
+  168  git add test.md
+  169  git add task1/ 2>/dev/null || echo "task1 not found"
+  170  git status
+  171  git commit -m "Add seminar task1 with all assignments"
+  172  git add commands.txt directory_structure.txt
+  173  git add commands* directory_structure*
+  174  git status
+  176  git add .gitignore
+  177  git commit -m "Add .gitignore and remaining assignment files"
+  178  git config --global user.email
+  180  git remote remove origin 2>/dev/null || true
+  181  git remote add origin git@github.com:silinavvcmd27/Seminars2026.git
+  182  git remote -v
+  183  git push -u origin main
+     git add README.md;     git commit -m "Add README.md"; fi
+  185  git push origin main
+  193  echo "2. Выполнить: git remote add origin git@github.com:silinavvcmd27/Seminars2026.git"
+  194  echo "3. Выполнить: git push -u origin main"
+  195  git remote add origin git@github.com:silinavvcmd27/Seminars2026.git
+  196  git push -u origin main
+  197  git remote remove origin 2>/dev/null || true
+  198  git remote add origin git@github.com:silinavvcmd27/Seminars2026.git
+  199  git remote -v
+  200  git push -u origin main
+  202  echo "Ветка: $(git branch --show-current)"
+  204  git log --oneline
+  207  git status
+  208  if [ -n "$(git status --porcelain)" ]; then     echo "Создаем коммит...";     git add .;     git commit -m "Add all seminar assignments"; fi
+  210  git push -u origin main
+  212  git log --oneline origin/main 2>/dev/null || git log --oneline
+  215  git checkout -b develop
+  216  git branch
+  220  git add data/samples.tsv
+  221  git status
+  222  git commit -m "Add samples.tsv file with sample data"
+  223  echo "=== git log ==="
+  224  git log --oneline -5
+  225  echo "=== git show ==="
+  226  git show HEAD
+  227  git show --stat
+  228  echo "=== git remote ==="
+  229  git remote -v
+  231  git remote show origin
+  232  git ls-remote --get-url origin
+  233  git checkout main
+# Разница между git log и git show
+## git log
+## git show
+- Можно указать конкретный коммит: git show <hash>
+1. git log показывает список коммитов, git show показывает один коммит детально
+2. git log показывает только метаданные, git show показывает изменения в коде
+3. git log используется для навигации по истории, git show для анализа изменений
+  235  git add diff.file
+  236  git commit -m "Add diff.file explaining difference between git log and git show"
+  237  git push origin main
+  238  git checkout develop
+  239  git push -u origin develop
+  243  git branch -a
+  254  git log --oneline --graph -5
+  257  git remote -v
+  258  git branch -vv
+  260  git log main..develop --oneline
+  261  git log develop..main --oneline
+  262  git clone https://github.com/Weakne55/Bioinformatics305.git
+  264  git remote remove origin
+  266  git clone https://github.com/Weakne55/Bioinformatics305.git
+  268  git remote remove origin
+  269  git remote add origin git@github.com:silinavvcmd27/Bioinformatics305.git
+  270  git push -u origin main
+  273  git clone https://github.com/Weakne55/Bioinformatics305.git
+  275  git remote remove origin
+  276  git remote add origin git@github.com:silinavvcmd27/Bioinformatics305.git
+  278  git branch -a
+  279  if git branch | grep -q "master"; then     echo "Переименовываем master в main...";     git branch -M master main; fi
+  280  if [ -z "$(git log --oneline 2>/dev/null)" ]; then     echo "Создаем начальный коммит...";     echo "# Bioinformatics305 Homework" > README_HOMEWORK.md;     git add README_HOMEWORK.md;     git commit -m "Initial commit for homework assignment"; fi
+  282  git push -u origin main
+  284  git remote -v
+  285  git log --oneline
+  291  git remote -v
+  292  git remote show origin 2>/dev/null || echo "Origin уже удален"
+  300  git add lab_disaster/raw_data/
+  301  git commit -m "Cleanup temp files"
+  305  git checkout -b investigation
+  306  git add infected_reads.txt
+  307  git commit -m "Add infected reads"
+  310  git add mini_run.fastq
+  311  git commit -m "Add mini_run.fastq"
+  315  git status
+  316  git checkout main
+  318  git add experiment.log
+  319  git commit -m "Add experiment.log for task 4"
+  322  git status
+  323  git checkout -- experiment.log
+  324  echo "git checkout -- experiment.log" > command.txt
+  325  git add command.txt
+  326  git commit -m "Add command.txt for task 4"
+  327  git status
+  330  git add sort.txt
+  331  git commit -m "Add sorted access log"
+  332  git merge investigation
+  335  git add genes_fixed.csv
+  336  git commit -m "Add fixed genes CSV"
+  339  git checkout -b cleaning
+  340  git add diskusage.file
+  341  git commit -m "Add disk usage report"
+  342  git checkout main
+  344  git add anyfile.txt
+  345  git commit -m "Add anyfile.txt"
+  346  HASH=$(git log --oneline -1 | cut -d' ' -f1 | cut -c1-4)
+  349  git add forgotten.txt
+  350  git commit --amend --no-edit
+  351  git log --oneline -5
+  353  git add amend.txt
+  354  git commit -m "Add amend.txt"
+  355  history | grep "git " > report_commands.txt
